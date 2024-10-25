@@ -1,0 +1,129 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del contenedor grid */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+}
+
+/* Estilos para cada área */
+header {
+    grid-area: header;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    height: 50px;
+    vertical-align: middle;
+}
+
+aside {
+    grid-area: aside;
+    background-color: #444;
+    padding: 20px;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+/* Galería de productos en Main */
+.galeria .imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.galeria img {
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/* Estilos de la tarjeta de producto */
+.producto {
+    text-align: center;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    font-size: 1.1em;
+    margin: 10px 0 5px;
+}
+
+.producto button {
+    padding: 8px 16px;
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.producto button:hover {
+    background-color: #218838;
+}
+
+/* Pie de pagina - Footer */
+
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-column form input,
+.footer-column form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.footer-column form button {
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
