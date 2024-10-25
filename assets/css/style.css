@@ -1,129 +1,237 @@
 /* Reset de estilos básicos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Estilos del contenedor grid */
 .grid-container {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        "aside main"
-        "footer footer";
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh; 
+  display: grid;
+  grid-template-areas:
+      "header header"
+      "aside main"
+      "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh; 
 }
 
 /* Estilos para cada área */
+
 header {
-    grid-area: header;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+  grid-area: header;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 .logo {
-    height: 50px;
-    vertical-align: middle;
+  height: 50px;
+  vertical-align: middle;
 }
 
 aside {
-    grid-area: aside;
-    background-color: #444;
-    padding: 20px;
+  grid-area: aside;
+  background-color: #444;
+  padding: 20px;
 }
 
 main {
-    grid-area: main;
-    padding: 20px;
+  grid-area: main;
+  padding: 20px;
 }
 
-/* Galería de productos en Main */
+      /* Estilos para el header */
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007BFF; /* Azul bonito */
+  padding: 30px 20px;
+  color: white;
+}
+
+.logo img {
+  max-height: 100px;
+  margin-left: 30px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+}
+
+.right-icons a {
+  margin-left: 15px; /* Espacio entre los íconos */
+  color: white; /* Color de los íconos */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.right-icons img {
+  max-height: 30px; /* Ajusta la altura de los íconos */
+}
+
+.whatsapp-icon {
+  display: flex;
+  align-items: center; /* Centra el número de WhatsApp con el ícono */
+}
+
+.whatsapp-icon span {
+  margin-left: 5px; /* Espacio entre el ícono y el número */
+  font-size: 14px; /* Tamaño del texto del número */
+}
+
+
+
+
+
+
+
+
+/* header {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header-content img {
+  height: 50px;
+}
+
+.header-content h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-left: 10px;
+} */
+
+
+      /* Galería de productos en Main */
+
 .galeria .imagenes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
 }
 
 .galeria img {
-    width: 100%; 
-    height: auto; 
-    max-height: 200px; 
-    object-fit: cover; 
-    border-radius: 8px;
+  width: 100%; 
+  height: auto; 
+  max-height: 200px; 
+  object-fit: cover; 
+  border-radius: 8px;
 }
 
-/* Estilos de la tarjeta de producto */
+      /* Estilos de la tarjeta de producto */
 .producto {
-    text-align: center;
+  text-align: center;
 }
 
 .producto img {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .producto h3 {
-    font-size: 1.1em;
-    margin: 10px 0 5px;
+  font-size: 1.1em;
+  margin: 10px 0 5px;
 }
 
 .producto button {
-    padding: 8px 16px;
-    background-color: #28A745;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  padding: 8px 16px;
+  background-color: #28A745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .producto button:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
-/* Pie de pagina - Footer */
+      /* Estilo para el menú lateral - ASIDE*/
+aside {
+  background-color: #1E1F22; 
+  padding: 20px;
+  color: #ffffff;
+  height: 100vh; 
+}
+
+aside nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside nav ul li {
+  margin: 15px 0; 
+}
+
+aside nav ul li a {
+  color: #ffffff; 
+  text-decoration: none;
+  font-size: 1.1em;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+aside nav ul li a:hover {
+  background-color: #28A745;
+  color: #ffffff;
+}
+
+      /* Pie de pagina - Footer */
 
 footer {
-    grid-area: footer;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    text-align: center;
+  grid-area: footer;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  text-align: center;
 }
 
 .footer-column {
-    width: 30%;
+  width: 30%;
 }
 
 .footer-column ul {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-column a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer-column form input,
 .footer-column form button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 .footer-column form button {
-    background-color: #28A745;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  background-color: #28A745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
