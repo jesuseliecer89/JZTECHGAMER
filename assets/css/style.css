@@ -62,7 +62,7 @@ main {
 
 .title h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 35px;
 }
 
 .right-icons {
@@ -90,33 +90,6 @@ main {
   font-size: 14px; /* Tamaño del texto del número */
 }
 
-
-
-
-
-
-
-
-/* header {
-  background-color: #1e3a8a;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.header-content img {
-  height: 50px;
-}
-
-.header-content h1 {
-  font-size: 1.8em;
-  font-weight: bold;
-  margin-left: 10px;
-} */
-
-
       /* Galería de productos en Main */
 
 .galeria .imagenes {
@@ -131,27 +104,31 @@ main {
   max-height: 200px; 
   object-fit: cover; 
   border-radius: 8px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
 }
+.galeria img:hover {
+  transform: scale(1.4); /* Aumenta el tamaño de la imagen en un 10% */
+} 
 
       /* Estilos de la tarjeta de producto */
-.producto {
+.producto_cat {
   text-align: center;
 }
 
-.producto img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
+.producto_cat img {
+  max-width: 100%;
+  max-height: 250px;
+  object-fit: contain;
   border-radius: 8px;
 }
 
-.producto h3 {
+.producto_cat h3 {
   font-size: 1.1em;
   margin: 10px 0 5px;
 }
 
-.producto button {
+.producto_cat button {
   padding: 8px 16px;
   background-color: #28A745;
   color: #fff;
@@ -161,7 +138,17 @@ main {
   transition: background-color 0.3s;
 }
 
-.producto button:hover {
+.producto_cat button {
+  padding: 8px 16px;
+  background-color: #5f28a7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.producto_cat button:hover {
   background-color: #218838;
 }
 
@@ -170,7 +157,7 @@ aside {
   background-color: #1E1F22; 
   padding: 20px;
   color: #ffffff;
-  height: 100vh; 
+  width: 100%;
 }
 
 aside nav ul {
@@ -210,7 +197,7 @@ footer {
 }
 
 .footer-column {
-  width: 30%;
+  width: 30%; 
 }
 
 .footer-column ul {
@@ -220,6 +207,23 @@ footer {
 .footer-column a {
   color: #fff;
   text-decoration: none;
+}
+
+.footer-column_red-menu {
+  width: 30%;
+  padding: 60px;
+  font-size: 20px;
+}
+
+.footer-column_red-menu ul{
+  list-style: none;
+  padding-top: 15px;
+}
+
+.footer-column_red-menu a{
+  color: #fff;
+  text-decoration: none;
+  padding-left: 10px;
 }
 
 .footer-column form input,
